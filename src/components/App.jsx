@@ -64,7 +64,7 @@ function App() {
           <div className="projectImage"></div>
           <article className="card">
             <h2 className="card__projectTitle">
-              <span className="card__projectTitle--text">{projectName}</span>
+              <span className="card__projectTitle--text">Proyectos Molones</span>
             </h2>
 
             <div className="card__author">
@@ -74,7 +74,7 @@ function App() {
             </div>
 
             <div className="card__project">
-              <h3 className="card__name">Elegant Workspace</h3>
+              <h3 className="card__name">{projectName}</h3>
               <p className="card__slogan">{slogan}</p>
               <h3 className="card__descriptionTitle">Product description</h3>
               <p className="card__description">{descripction}</p>
@@ -99,6 +99,9 @@ function App() {
               </div>
             </div>
           </article>
+          <div className="messageCardCreated hidden">
+            <p>La tarjeta ha sido creada:</p>
+          </div>
         </section>
         <form className="addForm">
           <h2 className="title">Información</h2>
@@ -176,7 +179,10 @@ function App() {
               placeholder="Trabajo"
             />
           </fieldset>
-
+          <div className="messageCardCreatedMobile hidden">
+            <p>La tarjeta ha sido creada:</p>
+            <a href="">Aquí estaría tu tarjeta</a>
+          </div>
           <fieldset className="addForm__group--upload">
             <label htmlFor="image" className="button">
               Subir foto del proyecto
