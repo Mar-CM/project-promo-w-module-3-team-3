@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import '../scss/App.scss';
 
-import companyLogo from '../images/laptop-code-solid.svg';
-import logo from '../images/adalab.png';
+import Header from './Header';
+// import Main from './Main';
+import Footer from './Footer';
+import LabelButton from './LabelButton';
 
-function App() {
+const App = () => {
   const [projectName, setProjectName] = useState('');
   const [slogan, setSlogan] = useState('');
   const [repository, setRepository] = useState('');
@@ -41,14 +43,7 @@ function App() {
 
   return (
     <div className="container">
-      <header className="header">
-        <a className="header__brand" href="./" title="Haz click para volver a la página inicial">
-          <img className="header__companyLogo" src={companyLogo} alt="Logo proyectos molones" />
-          <h1 className="header__title">Proyectos molones</h1>
-        </a>
-        <img className="logoSponsor" src={logo} alt="Logo Adalab" />
-      </header>
-
+      <Header />
       <main className="main">
         <section className="hero">
           <h2 className="title">Proyectos molones</h2>
@@ -59,12 +54,13 @@ function App() {
             Ver proyectos
           </a>
         </section>
-
         <section className="preview">
           <div className="projectImage"></div>
           <article className="card">
             <h2 className="card__projectTitle">
-              <span className="card__projectTitle--text">Proyectos Molones</span>
+              <span className="card__projectTitle--text">
+                Proyectos Molones
+              </span>
             </h2>
 
             <div className="card__author">
@@ -106,7 +102,9 @@ function App() {
         <form className="addForm">
           <h2 className="title">Información</h2>
           <fieldset className="addForm__group">
-            <legend className="addForm__title">Cuéntanos sobre el proyecto</legend>
+            <legend className="addForm__title">
+              Cuéntanos sobre el proyecto
+            </legend>
             <input
               onChange={handleProjectName}
               className="addForm__input"
@@ -161,7 +159,9 @@ function App() {
           </fieldset>
 
           <fieldset className="addForm__group">
-            <legend className="addForm__title">Cuéntanos sobre la autora</legend>
+            <legend className="addForm__title">
+              Cuéntanos sobre la autora
+            </legend>
             <input
               onChange={handleUserName}
               className="addForm__input"
@@ -184,24 +184,33 @@ function App() {
             <a href="">Aquí estaría tu tarjeta</a>
           </div>
           <fieldset className="addForm__group--upload">
-            <label htmlFor="image" className="button">
+            {/* <label htmlFor="image" className="button">
               Subir foto del proyecto
-            </label>
-            <input className="addForm__hidden" type="file" name="image" id="image" />
-            <label htmlFor="photo" className="button">
+            </label> */}
+            <LabelButton htmlFor="image" text="Subir foto del proyecto" />
+            <input
+              className="addForm__hidden"
+              type="file"
+              name="image"
+              id="image"
+            />
+            {/* <label htmlFor="photo" className="button">
               Subir foto de la autora
-            </label>
-            <input className="addForm__hidden" type="file" name="photo" id="photo" />
+            </label> */}
+            <LabelButton htmlFor="photo" text="Subir foto de la autora" />
+            <input
+              className="addForm__hidden"
+              type="file"
+              name="photo"
+              id="photo"
+            />
             <button className="button--large">Guardar proyecto</button>
           </fieldset>
         </form>
       </main>
-
-      <footer className="footer">
-        <img className="logoSponsor" src={logo} alt="Logo Adalab" />
-      </footer>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
