@@ -5,7 +5,7 @@
 
 .container {
   padding: 22px 22px 0 22px;
-  background-color: var(--color-dark);
+  background-color: $color-dark;
 }
 
 
@@ -31,12 +31,12 @@
 }
 
 .hero .title {
-  font: var(--font-title-big);
+  font: $font-title-big;
   margin-bottom: 8px;
 }
 
 .hero .hero__text {
-  font: var(--font-text-big);
+  font: $font-text-big;
   text-align: center;
   margin-inline: 4rem;
   margin-bottom: 1.8rem;
@@ -62,18 +62,18 @@
   display: grid;
   grid-template-columns: 40% 60%;
 
-  color: var(--color-black);
-  font: var(--font-card-text);
+  color: $color-black;
+  font: $font-card-text;
 
   border-radius: 20px;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-style: solid;
   border-width: 1px;
-  border-image-source: linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
+  border-image-source: linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
   border-image-slice: 1;
-  background-image: linear-gradient(to bottom, var(--color-white), var(--color-white)),
-    linear-gradient(to bottom, var(--color-white) 0%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, $color-white, $color-white),
+    linear-gradient(to bottom, $color-white 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
@@ -85,7 +85,7 @@
   text-align: center;
   text-transform: capitalize;
 
-  font: var(--font-card-section);
+  font: $font-card-section;
 }
 
 .card .card__projectTitle::before {
@@ -101,7 +101,7 @@
     to right,
     white,
     #232323 15%,
-    var(--color-black),
+    $color-black,
     #232323 85%,
     white
   );
@@ -111,7 +111,7 @@
   position: relative;
   padding-inline: 0.1em;
   z-index: 1;
-  background-color: var(--color-white);
+  background-color: $color-white;
 }
 
 .card .card__author {
@@ -136,7 +136,7 @@
 }
 
 .card .card__name {
-  font: var(--font-card-title);
+  font: $font-card-title;
   margin-bottom: 0.2rem;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .card .card__slogan {
-  font: var(--font-card-subtitle);
+  font: $font-card-subtitle;
   margin-top: -0.2rem;
   margin-bottom: 0.8rem;
 }
@@ -164,7 +164,7 @@
 }
 
 .card .card__technologies {
-  font: var(--font-card-tech);
+  font: $font-card-tech;
 }
 
 .messageCardCreated,
@@ -172,11 +172,11 @@
   margin: 0px 20px 20px 20px;
   padding: 15px;
   text-align: center;
-  color: var(--color-black);
-  font: var(--font-card-title);
+  color: $color-black;
+  font: $font-card-title;
   font-size: rem;
   border-radius: 20px;
-  background-color: var(--color-white);
+  background-color: $color-white;
 }
 .hidden {
   display: none;
@@ -195,11 +195,11 @@
 
   box-shadow: 2px 4px 4px 0 rgba(0, 0, 0, 0.25);
   border: solid 1px rgba(0, 0, 0, 0);
-  background-image: radial-gradient(circle at 50% 50%, var(--color-dusk), #211e2e 92%);
+  background-image: radial-gradient(circle at 50% 50%, $color-dusk, #211e2e 92%);
 }
 
 .addForm .title {
-  font: var(--font-title-biggest);
+  font: $font-title-biggest;
   margin-block: 18px;
 }
 
@@ -210,7 +210,7 @@
   margin-block: 0.5rem;
   border: solid 2px transparent;
 
-  font: var(--font-title-medium);
+  font: $font-title-medium;
   text-align: center;
 }
 
@@ -230,7 +230,7 @@
     transparent,
     #343045 25%,
     #c0b7e8 45%,
-    var(--color-dark-lilac) 65%,
+    $color-dark-lilac 65%,
     #343045 75%,
     transparent
   );
@@ -247,16 +247,16 @@
 
   padding: 8.5px 16px 8.5px 16px;
   border-radius: 40px;
-  border: solid 2px var(--color-white);
+  border: solid 2px $color-white;
 
-  color: var(--color-white);
+  color: $color-white;
   background-color: transparent;
 
-  font: var(--font-normal);
+  font: $font-normal;
 }
 
 .addForm .addForm__input::placeholder {
-  color: var(--color-white-50);
+  color: $color-white-50;
 }
 
 .addForm .addForm__group--upload {
@@ -300,8 +300,8 @@
   margin-inline: auto;
   margin-block: 8px;
   padding: 5px 18px;
-  color: var(--color-white);
-  font: var(--font-button);
+  color: $color-white;
+  font: $font-button;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -312,9 +312,9 @@
   border-image-source: linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   border-image-slice: 1;
   border-radius: 20px;
-  background-color: var(--color-dark-lilac);
+  background-color: $color-dark-lilac;
   /*
-  background-image: linear-gradient(to bottom, var(--color-dark-lilac), var(--color-dark-lilac)), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to bottom, $color-dark-lilac, $color-dark-lilac), linear-gradient(to bottom, #2a2a2a 0%, rgba(0, 0, 0, 0));
   background-origin: border-box;
   background-clip: content-box, border-box;
   */
@@ -328,20 +328,20 @@
   margin-inline: auto;
   margin-block: 8px;
   padding: 5px 18px;
-  color: var(--color-white);
-  font: var(--font-button);
+  color: $color-white;
+  font: $font-button;
   text-transform: none;
   text-decoration: none;
   text-align: center;
 
   border-radius: 40px;
   background-color: transparent;
-  background-image: linear-gradient(to right, var(--color-dark-lilac) -2%, #c0b7e8 98%);
+  background-image: linear-gradient(to right, $color-dark-lilac -2%, #c0b7e8 98%);
 
   cursor: pointer;
 
   &:hover {
-      border-color: var(--color-white);
+      border-color: $color-white;
     }
 }
 
@@ -354,7 +354,7 @@
   color: transparent;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 0 5px 0 var(--color-greyish-brown-two);
+  box-shadow: 0 0 5px 0 $color-greyish-brown-two;
 }
 
 .icon__www {

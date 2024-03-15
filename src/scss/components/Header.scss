@@ -14,11 +14,11 @@
   
   .header .header__companyLogo {
     height: 31px;
-    color: var(--color-white);
+    color: $color-white;
   }
   
   .header .header__title {
-    font: var(--font-title-brand);
+    font: $font-title-brand;
     text-transform: capitalize;
-    color: var(--color-white);
+    color: $color-white;
   }
