@@ -1,84 +1,50 @@
-import { useState } from "react";
-import "../scss/App.scss";
+import { useState } from 'react';
+import '../scss/App.scss';
 
-import Header from "./Header";
+import Header from './Header';
 //import Main from './Main';
-import Preview from "./Preview";
-import Form from "./Form";
-import Footer from "./Footer";
+import Preview from './Preview';
+import Form from './Form';
+import Footer from './Footer';
+import GetAvatar from './GetAvatar';
 
 const App = () => {
-	const [projectName, setProjectName] = useState("");
-	const [slogan, setSlogan] = useState("");
-	const [repository, setRepository] = useState("");
-	const [demo, setDemo] = useState("");
-	const [tech, setTech] = useState("");
-	const [description, setDescription] = useState("");
-	const [userName, setUserName] = useState("");
-	const [userJob, setUserJob] = useState("");
+  const [projectInfo, setProjectInfo] = useState({
+    name: 'Elegant Workspaces',
+    slogan: 'Exclusive designs',
+    repo: '',
+    demo: '',
+    technologies: 'React, CSS, HTML',
+    desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ab quod voluptatibus unde! Voluptates consequuntur dolorum eligendi ipsa amet voluptatum ipsam doloremque quia non? Voluptate provident ipsum nihil repudiandae. Nihil?',
+    autor: 'Mary Poppins',
+    job: 'Babysitter',
+    imageProject: '',
+    imageAuthor: '',
+  });
 
-	const handleProjectName = (value) => {
-		setProjectName(value);
-	};
-	const handleSlogan = (value) => {
-		setSlogan(value);
-	};
-	const handleRepository = (value) => {
-		setRepository(value);
-	};
-	const handleDemo = (value) => {
-		setDemo(value);
-	};
-	const handleTech = (value) => {
-		setTech(value);
-	};
-	const handleDescription = (value) => {
-		setDescription(value);
-	};
-	const handleUserName = (value) => {
-		setUserName(value);
-	};
-	const handleUserJob = (value) => {
-		setUserJob(value);
-	};
+  const handleProjectInfo = (value, id) => {
+    setProjectInfo({ ...projectInfo, [id]: value });
+  };
 
-	return (
-		<div className="container">
-			<Header />
-			<main className="main">
-				<section className="hero">
-					<h2 className="title">Proyectos molones</h2>
-					<p className="hero__text">
-						Escaparate en línea para recoger ideas a través de la tecnología
-					</p>
-					<a className="button--link" href="./">
-						Ver proyectos
-					</a>
-				</section>
-				<Preview
-					projectName={projectName}
-					slogan={slogan}
-					repository={repository}
-					demo={demo}
-					tech={tech}
-					description={description}
-					userName={userName}
-					userJob={userJob}
-				/>
-				<Form
-					handleProjectName={handleProjectName}
-					handleSlogan={handleSlogan}
-					handleRepository={handleRepository}
-					handleDemo={handleDemo}
-					handleTech={handleTech}
-					handleDescription={handleDescription}
-					handleUserName={handleUserName}
-					handleUserJob={handleUserJob}
-				/>
-			</main>
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="container">
+      <Header />
+      <main className="main">
+        <section className="hero">
+          <h2 className="title">Proyectos molones</h2>
+          <p className="hero__text">
+            Escaparate en línea para recoger ideas a través de la tecnología
+          </p>
+          <a className="button--link" href="./">
+            Ver proyectos
+          </a>
+        </section>
+        <Preview projectInfo={projectInfo} />
+        <Form onChangeProjectInfo={handleProjectInfo} projectInfo={projectInfo} />
+      </main>
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
