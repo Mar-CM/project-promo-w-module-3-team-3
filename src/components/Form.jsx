@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
-import LabelButton from './LabelButton';
+import GetAvatar from './GetAvatar';
 
-function Form({ onChangeProjectInfo, projectInfo }) {
+function Form({ onChangeProjectInfo, projectInfo, updateAvatar }) {
   const handleProjectInput = (event) => {
     const value = event.target.value;
     const id = event.target.id;
@@ -90,10 +90,20 @@ function Form({ onChangeProjectInfo, projectInfo }) {
         <a href="">Aquí estaría tu tarjeta</a>
       </div>
       <fieldset className="addForm__group--upload">
-        <LabelButton htmlFor="image" text="Subir foto del proyecto" />
+        <GetAvatar
+          updateAvatar={updateAvatar}
+          text="Subir foto del proyecto"
+          id="imageProject"
+        />
+        <GetAvatar
+          updateAvatar={updateAvatar}
+          text="Subir foto de la autora"
+          id="imageAuthor"
+        />
+        {/* <LabelButton htmlFor="image" text="Subir foto del proyecto" />
         <input className="addForm__hidden" type="file" name="image" id="image" />
         <LabelButton htmlFor="photo" text="Subir foto de la autora" />
-        <input className="addForm__hidden" type="file" name="photo" id="photo" />
+        <input className="addForm__hidden" type="file" name="photo" id="photo" /> */}
         <button className="button--large">Guardar proyecto</button>
       </fieldset>
     </form>

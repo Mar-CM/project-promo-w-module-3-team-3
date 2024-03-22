@@ -18,13 +18,17 @@ const App = () => {
     desc: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ab quod voluptatibus unde! Voluptates consequuntur dolorum eligendi ipsa amet voluptatum ipsam doloremque quia non? Voluptate provident ipsum nihil repudiandae. Nihil?',
     autor: 'Mary Poppins',
     job: 'Babysitter',
-    imageProject: '',
-    imageAuthor: '',
+    imageProject:
+      'https://i.blogs.es/25fd38/disney-mary-poppins-critica-1964/450_1000.jpg',
+    imageAuthor:
+      'https://img.rtve.es/imagenes/mary-poppins-dificultades-su-rodaje/1641918077286.jpg',
   });
 
   const handleProjectInfo = (value, id) => {
     setProjectInfo({ ...projectInfo, [id]: value });
   };
+
+  const handleAvatar = (value) => {};
 
   return (
     <div className="container">
@@ -40,7 +44,11 @@ const App = () => {
           </a>
         </section>
         <Preview projectInfo={projectInfo} />
-        <Form onChangeProjectInfo={handleProjectInfo} projectInfo={projectInfo} />
+        <Form
+          onChangeProjectInfo={handleProjectInfo}
+          projectInfo={projectInfo}
+          updateAvatar={handleProjectInfo}
+        />
       </main>
       <Footer />
     </div>

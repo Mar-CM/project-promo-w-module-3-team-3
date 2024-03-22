@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 
 function Preview({ projectInfo }) {
+  const divStyle = { backgroundImage: `url(${projectInfo.imageAuthor})` };
+  const divProjectStyle = {
+    backgroundImage: `url(${projectInfo.imageProject})`,
+  };
   return (
     <section className="preview">
-      <div className="projectImage"></div>
+      <div className="projectImage" style={divProjectStyle}></div>
       <article className="card">
         <h2 className="card__projectTitle">
           <span className="card__projectTitle--text">Proyectos Molones</span>
         </h2>
 
         <div className="card__author">
-          <div className="card__authorPhoto"></div>
+          <div className="card__authorPhoto" style={divStyle}></div>
           <p className="card__job">{projectInfo.job}</p>
           <h3 className="card__name">{projectInfo.autor}</h3>
         </div>
