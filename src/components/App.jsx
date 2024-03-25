@@ -14,8 +14,8 @@ const App = () => {
       slogan: "Exclusive designs",
       repo: "",
       demo: "",
-      technologies: "React, CSS, HTML",
-      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas ab quod voluptatibus unde! Voluptates consequuntur dolorum eligendi ipsa amet voluptatum ipsam doloremque quia non? Voluptate provident ipsum nihil repudiandae. Nihil?",
+      technologies: "SuperBolso - SuperParaguas",
+      desc: "¡Hey! Soy Mary Poppins, la niñera más top de todas. ¿Severa? Bueno, tal vez un poquito, pero siempre con el mayor cuidado. Me encanta sacar trucos de magia y mantenerme siempre bajo control mientras cuido a los hijos de los Banks. ¿Mi estilo? Siempre me verás con mi sombrero gigante y mi súper cool paraguas. En pocas palabras, soy una figura misteriosa y súper divertida que deja una huella mágica en todos los que me conocen.",
       autor: "Mary Poppins",
       job: "Babysitter",
       image:
