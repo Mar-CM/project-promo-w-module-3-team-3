@@ -1,9 +1,10 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+// import CardUrl from "./CardUrl";
 
-function Preview({ projectInfo }) {
-  const divStyle = { backgroundImage: `url(${projectInfo.imageAuthor})` };
+function Preview({ projectInfo, cardUrl }) {
+  const divStyle = { backgroundImage: `url(${projectInfo.photo})` };
   const divProjectStyle = {
-    backgroundImage: `url(${projectInfo.imageProject})`,
+    backgroundImage: `url(${projectInfo.image})`,
   };
   return (
     <section className="preview">
@@ -45,13 +46,12 @@ function Preview({ projectInfo }) {
           </div>
         </div>
       </article>
-      <div className="messageCardCreated hidden">
-        <p>La tarjeta ha sido creada:</p>
-      </div>
+      {/* <CardUrl cardUrl={cardUrl} /> */}
     </section>
   );
 }
 Preview.propTypes = {
+  cardUrl: PropTypes.string.isRequired,
   projectInfo: PropTypes.object.isRequired,
 };
 

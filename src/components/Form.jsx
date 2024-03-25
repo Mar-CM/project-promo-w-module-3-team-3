@@ -1,11 +1,16 @@
-import PropTypes from 'prop-types';
-import GetAvatar from './GetAvatar';
+import PropTypes from "prop-types";
+import GetAvatar from "./GetAvatar";
+import CardUrl from "./CardUrl";
 
-function Form({ onChangeProjectInfo, projectInfo, updateAvatar }) {
+function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
   const handleProjectInput = (event) => {
     const value = event.target.value;
     const id = event.target.id;
     onChangeProjectInfo(value, id);
+  };
+  const handleSaveProject = (ev) => {
+    ev.preventDefault();
+    onClickSave();
   };
 
   return (
@@ -85,27 +90,27 @@ function Form({ onChangeProjectInfo, projectInfo, updateAvatar }) {
           placeholder="Trabajo"
         />
       </fieldset>
-      <div className="messageCardCreatedMobile hidden">
-        <p>La tarjeta ha sido creada:</p>
-        <a href="">Aquí estaría tu tarjeta</a>
-      </div>
+
       <fieldset className="addForm__group--upload">
         <GetAvatar
           updateAvatar={updateAvatar}
           text="Subir foto del proyecto"
-          id="imageProject"
+          id="image"
         />
         <GetAvatar
           updateAvatar={updateAvatar}
           text="Subir foto de la autora"
-          id="imageAuthor"
+          id="photo"
         />
         {/* <LabelButton htmlFor="image" text="Subir foto del proyecto" />
         <input className="addForm__hidden" type="file" name="image" id="image" />
         <LabelButton htmlFor="photo" text="Subir foto de la autora" />
         <input className="addForm__hidden" type="file" name="photo" id="photo" /> */}
-        <button className="button--large">Guardar proyecto</button>
+        <button className="button--large" onClick={handleSaveProject}>
+          Guardar proyecto
+        </button>
       </fieldset>
+      {cardUrl && <CardUrl cardUrl={cardUrl} />}
     </form>
   );
 }
@@ -113,6 +118,9 @@ function Form({ onChangeProjectInfo, projectInfo, updateAvatar }) {
 Form.propTypes = {
   projectInfo: PropTypes.object.isRequired,
   onChangeProjectInfo: PropTypes.func.isRequired,
+  updateAvatar: PropTypes.func.isRequired,
+  onClickSave: PropTypes.func.isRequired,
+  cardUrl: PropTypes.string.isRequired,
 };
 
 export default Form;
