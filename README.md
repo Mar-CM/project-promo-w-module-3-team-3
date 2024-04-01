@@ -1,8 +1,8 @@
-# Proyectos Molones
+# Choripoppins Projects
 
-¡Bienvenido a Proyectos Molones! Aquí puedes crear tarjetas de perfil para tus proyectos de manera simple y rápida. Con nuestras herramientas de personalización dinámica, podrás destacar el nombre de tu proyecto, agregar un eslogan impactante y detallar las tecnologías utilizadas. Además, ¡puedes personalizar las imágenes de perfil y de autor para reflejar la esencia de tu proyecto! Finalmente, comparte tu tarjeta de proyecto directamente en tus redes sociales favoritas y haz que el mundo conozca tu genialidad.
+¡Bienvenido a Choripoppins Projects! Aquí puedes crear tarjetas de perfil para tus proyectos de manera simple y rápida. Con nuestras herramientas de personalización dinámica, podrás destacar el nombre de tu proyecto, agregar un eslogan impactante y detallar las tecnologías utilizadas. Además, ¡puedes personalizar las imágenes de perfil y de autor para reflejar la esencia de tu proyecto! Finalmente, comparte tu tarjeta de proyecto directamente en tus redes sociales favoritas y haz que el mundo conozca tu genialidad.
 
-## Equipo de Proyectos Molones ft. Mary Poppins
+## Choripoppins ft. Mary Poppins
 
 Juntas, Noelia, Mar, Bea y María forman un equipo dinámico y divertido, capaz de enfrentar cualquier desafío con una sonrisa en el rostro y un toque de magia, gracias a la colaboración especial de Mary Poppins. Su dinamismo y buen humor son evidentes en cada paso del proceso de trabajo. Juntos, forman un equipo creativo y colaborativo, capaz de enfrentar cualquier desafío con una sonrisa y encontrar soluciones innovadoras para lograr el éxito de su proyecto.
 
