@@ -11,13 +11,11 @@
   }
 
   .logoTeam {
-    height: 60%;
-    max-height: 500px;
+    width: 60%;
+    max-width: 500px;
     margin: 5vh auto;
-
     img {
-      height: 100%;
-      max-height: 500px;
+      width: 100%;
     }
   }
   &__button {
