@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 // import CardUrl from "./CardUrl";
 
-function Preview({ projectInfo, cardUrl }) {
+function Preview({ projectInfo }) {
   const divStyle = { backgroundImage: `url(${projectInfo.photo})` };
   const divProjectStyle = {
     backgroundImage: `url(${projectInfo.image})`,
@@ -55,7 +55,6 @@ function Preview({ projectInfo, cardUrl }) {
           </div>
         </div>
       </article>
-      {/* <CardUrl cardUrl={cardUrl} /> */}
     </section>
   );
 }
