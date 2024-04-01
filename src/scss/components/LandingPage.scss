@@ -1,0 +1,42 @@
+@import '../core/variables';
+
+.landingPage {
+  height: 100vh;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logoTeam {
+    height: 60%;
+    max-height: 500px;
+    margin: 5vh auto;
+
+    img {
+      height: 100%;
+      max-height: 500px;
+    }
+  }
+  &__button {
+    width: 145px;
+    margin-inline: auto;
+    margin-block: 8px;
+    padding: 5px 18px;
+    color: $color-white;
+    font: $font-button;
+    text-transform: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 40px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, $color-dark-lilac -2%, #c0b7e8 98%);
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-white;
+    }
+  }
+}
