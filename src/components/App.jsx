@@ -8,21 +8,22 @@ import Footer from "./Footer";
 import localStorage from "../services/localStorage";
 
 const App = () => {
+  const infoDefault = {
+    name: "",
+    slogan: "",
+    repo: "",
+    demo: "",
+    technologies: "",
+    desc: "",
+    autor: "",
+    job: "",
+    image:
+      "https://i.blogs.es/25fd38/disney-mary-poppins-critica-1964/450_1000.jpg",
+    photo:
+      "https://img.rtve.es/imagenes/mary-poppins-dificultades-su-rodaje/1641918077286.jpg",
+  };
   const [projectInfo, setProjectInfo] = useState(
-    localStorage.get("project") || {
-      name: "Elegant Workspaces",
-      slogan: "Exclusive designs",
-      repo: "",
-      demo: "",
-      technologies: "SuperBolso - SuperParaguas",
-      desc: "¡Hey! Soy Mary Poppins, la niñera más top de todas. ¿Severa? Bueno, tal vez un poquito, pero siempre con el mayor cuidado. Me encanta sacar trucos de magia y mantenerme siempre bajo control mientras cuido a los hijos de los Banks. ¿Mi estilo? Siempre me verás con mi sombrero gigante y mi súper cool paraguas. En pocas palabras, soy una figura misteriosa y súper divertida que deja una huella mágica en todos los que me conocen.",
-      autor: "Mary Poppins",
-      job: "Babysitter",
-      image:
-        "https://i.blogs.es/25fd38/disney-mary-poppins-critica-1964/450_1000.jpg",
-      photo:
-        "https://img.rtve.es/imagenes/mary-poppins-dificultades-su-rodaje/1641918077286.jpg",
-    }
+    localStorage.get("project") || infoDefault
   );
   const [url, setUrl] = useState("");
 
@@ -43,7 +44,10 @@ const App = () => {
     setProjectInfo({ ...projectInfo, [id]: value });
     localStorage.set("project", projectInfo);
   };
-
+  const handleReset = () => {
+    setProjectInfo(infoDefault);
+    localStorage.clear();
+  };
   return (
     <div className="container">
       <Header />
@@ -63,6 +67,7 @@ const App = () => {
           projectInfo={projectInfo}
           updateAvatar={handleProjectInfo}
           onClickSave={handleCreateProject}
+          onClickReset={handleReset}
           cardUrl={url}
         />
       </main>

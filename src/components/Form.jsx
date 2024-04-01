@@ -2,7 +2,14 @@ import PropTypes from "prop-types";
 import GetAvatar from "./GetAvatar";
 import CardUrl from "./CardUrl";
 
-function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
+function Form({
+  onChangeProjectInfo,
+  updateAvatar,
+  onClickSave,
+  onClickReset,
+  cardUrl,
+  projectInfo,
+}) {
   const handleProjectInput = (event) => {
     const value = event.target.value;
     const id = event.target.id;
@@ -11,6 +18,10 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
   const handleSaveProject = (ev) => {
     ev.preventDefault();
     onClickSave();
+  };
+  const handleClickReset = (ev) => {
+    ev.preventDefault();
+    onClickReset();
   };
 
   return (
@@ -25,6 +36,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           name="name"
           id="name"
           placeholder="Nombre del proyecto"
+          value={projectInfo.name}
         />
         <input
           onChange={handleProjectInput}
@@ -33,6 +45,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           name="slogan"
           id="slogan"
           placeholder="Slogan"
+          value={projectInfo.slogan}
         />
         <div className="addForm__2col">
           <input
@@ -42,6 +55,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
             name="repo"
             id="repo"
             placeholder="Repositorio"
+            value={projectInfo.repo}
           />
           <input
             onChange={handleProjectInput}
@@ -50,6 +64,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
             name="demo"
             id="demo"
             placeholder="Demo"
+            value={projectInfo.demo}
           />
         </div>
         <input
@@ -59,6 +74,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           name="technologies"
           id="technologies"
           placeholder="Tecnologías"
+          value={projectInfo.technologies}
         />
         <textarea
           onChange={handleProjectInput}
@@ -68,6 +84,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           id="desc"
           placeholder="Descripción"
           rows="5"
+          value={projectInfo.desc}
         ></textarea>
       </fieldset>
 
@@ -80,6 +97,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           name="autor"
           id="autor"
           placeholder="Nombre"
+          value={projectInfo.autor}
         />
         <input
           onChange={handleProjectInput}
@@ -88,6 +106,7 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           name="job"
           id="job"
           placeholder="Trabajo"
+          value={projectInfo.job}
         />
       </fieldset>
 
@@ -102,12 +121,11 @@ function Form({ onChangeProjectInfo, updateAvatar, onClickSave, cardUrl }) {
           text="Subir foto de la autora"
           id="photo"
         />
-        {/* <LabelButton htmlFor="image" text="Subir foto del proyecto" />
-        <input className="addForm__hidden" type="file" name="image" id="image" />
-        <LabelButton htmlFor="photo" text="Subir foto de la autora" />
-        <input className="addForm__hidden" type="file" name="photo" id="photo" /> */}
         <button className="button--large" onClick={handleSaveProject}>
           Guardar proyecto
+        </button>
+        <button className="button--large reset" onClick={handleClickReset}>
+          Reset
         </button>
       </fieldset>
       {cardUrl && <CardUrl cardUrl={cardUrl} />}
@@ -120,6 +138,7 @@ Form.propTypes = {
   onChangeProjectInfo: PropTypes.func.isRequired,
   updateAvatar: PropTypes.func.isRequired,
   onClickSave: PropTypes.func.isRequired,
+  onClickReset: PropTypes.func.isRequired,
   cardUrl: PropTypes.string.isRequired,
 };
 
