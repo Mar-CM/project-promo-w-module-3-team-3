@@ -41,6 +41,7 @@ const App = () => {
   };
   const handleReset = () => {
     setProjectInfo(infoDefault);
+    setUrl('');
     localStorage.clear();
   };
   return (
