@@ -1,4 +1,4 @@
-# Choripoppins Projects
+# Choripoppins Projects ☂️
 
 ¡Bienvenido a Choripoppins Projects! Aquí puedes crear tarjetas de perfil para tus proyectos de manera simple y rápida. Con nuestras herramientas de personalización dinámica, podrás destacar el nombre de tu proyecto, agregar un eslogan impactante y detallar las tecnologías utilizadas. Además, ¡puedes personalizar las imágenes de perfil y de autor para reflejar la esencia de tu proyecto! Finalmente, comparte tu tarjeta de proyecto directamente en tus redes sociales favoritas y haz que el mundo conozca tu genialidad.
 
